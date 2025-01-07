@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KHR - Diversão Simples</title>
+    <title>KHR - Diversão Canina</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #f0f8ff;
+            overflow: hidden;
         }
 
         h1 {
@@ -25,18 +26,28 @@
         }
 
         button {
-            background-color: #4CAF50;
+            background-color: #ff4500;
             color: white;
             border: none;
             padding: 15px 30px;
             font-size: 18px;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 10px;
             margin-top: 20px;
+            animation: button-bounce 1s infinite;
         }
 
         button:hover {
-            background-color: #45a049;
+            background-color: #ff6347;
+        }
+
+        @keyframes button-bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
         }
 
         #dog-container {
@@ -46,16 +57,17 @@
 
         #dog {
             position: relative;
-            width: 100px;
-            height: 100px;
+            width: 150px;
+            height: 150px;
             margin: 0 auto;
             background: url('https://cdn-icons-png.flaticon.com/512/194/194279.png') no-repeat center;
             background-size: contain;
+            animation: dog-wiggle 2s infinite;
         }
 
         #poop {
             position: absolute;
-            top: 120px;
+            top: 140px;
             left: 50%;
             transform: translateX(-50%);
             width: 20px;
@@ -66,36 +78,75 @@
             animation: poop-drop 1s ease-in-out forwards;
         }
 
+        @keyframes dog-wiggle {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(10deg);
+            }
+            75% {
+                transform: rotate(-10deg);
+            }
+        }
+
         @keyframes poop-drop {
             from {
-                top: 120px;
+                top: 140px;
                 opacity: 0;
             }
             to {
-                top: 150px;
+                top: 180px;
                 opacity: 1;
+            }
+        }
+
+        #ball {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 30px;
+            height: 30px;
+            background-color: orange;
+            border-radius: 50%;
+            animation: ball-bounce 1.5s ease-in-out infinite;
+        }
+
+        @keyframes ball-bounce {
+            0%, 100% {
+                bottom: -50px;
+            }
+            50% {
+                bottom: 200px;
             }
         }
     </style>
 </head>
 <body>
     <h1>Bem-vindo ao KHR</h1>
-    <p>Clique no botão abaixo para se divertir com nosso cachorro!</p>
+    <p>Clique no botão abaixo para ver nosso cachorro em ação!</p>
 
     <button onclick="showDog()">Clique Aqui</button>
 
     <div id="dog-container">
         <div id="dog"></div>
         <div id="poop"></div>
+        <div id="ball"></div>
     </div>
 
     <script>
         function showDog() {
             const dogContainer = document.getElementById('dog-container');
             const poop = document.getElementById('poop');
+            const ball = document.getElementById('ball');
 
             dogContainer.style.display = 'block';
             poop.style.display = 'block';
+
+            setTimeout(() => {
+                ball.style.display = 'block';
+            }, 1000);
         }
     </script>
 </body>
