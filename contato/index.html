@@ -15,84 +15,115 @@
 </head>
 <body>
 
-    <header class="site-header">
-      <div class="container navbar">
-        <a class="brand" href="/index.html">REYNARD</a>
-        <nav class="nav-links" aria-label="Principal">
-          <a  href="/index.html">Home</a>
-          <a  href="/sobre/index.html">Sobre</a>
-          <a  href="/blog/index.html">Blog</a>
-          <a class="active" href="/contato/index.html">Contato</a>
-          <a href="/politica-de-privacidade/index.html">Privacidade</a>
-        </nav>
-      </div>
-    </header>
-    
-<main>
-<section class="page-hero">
-  <div class="container">
-    <div class="card">
-      <div class="breadcrumbs"><a href="/index.html">Home</a> / Contato</div>
-      <h1 style="margin:0 0 .75rem;">Entre em contato</h1>
-      <p style="margin:0;color:var(--muted);">Seja você um profissional liberal, autônomo ou pequena empresa, esta página serve como ponto de entrada para novos projetos e dúvidas comerciais.</p>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="/index.html">REYNARD</a>
+      <nav class="nav-links" aria-label="Principal">
+        <a href="/index.html">Home</a>
+        <a href="/sobre/index.html">Sobre</a>
+        <a href="/blog/index.html">Blog</a>
+        <a class="active" href="/contato/index.html">Contato</a>
+        <a href="/politica-de-privacidade/index.html">Privacidade</a>
+      </nav>
     </div>
-  </div>
-</section>
-<section>
-  <div class="container blog-grid">
-    <div class="card">
-      <h2 style="margin-top:0;">Envie sua mensagem</h2>
-      <form>
-        <div class="form-grid">
-          <div><label>Nome<br /><input type="text" placeholder="Seu nome" /></label></div>
-          <div><label>E-mail<br /><input type="email" placeholder="voce@empresa.com" /></label></div>
-        </div>
-        <div class="form-grid" style="margin-top:1rem;">
-          <div><label>Telefone<br /><input type="text" placeholder="(00) 00000-0000" /></label></div>
-          <div><label>Assunto<br /><input type="text" placeholder="Quero um site" /></label></div>
-        </div>
-        <div style="margin-top:1rem;"><label>Mensagem<br /><textarea placeholder="Conte um pouco sobre o que você precisa."></textarea></label></div>
-        <div style="margin-top:1rem;display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
-          <button class="btn btn-primary" type="button">Enviar mensagem</button>
-          <span class="small-note">Este formulário é visual. Depois você pode integrar com Formspree, Basin ou outro serviço.</span>
-        </div>
-      </form>
-    </div>
-    <aside class="card">
-      <h3 style="margin-top:0;">Informações</h3>
-      <ul class="list-clean">
-        <li><strong>E-mail:</strong> <a href="mailto:contato@reynard.com.br">contato@reynard.com.br</a></li>
-        <li><strong>WhatsApp:</strong> <a href="https://wa.me/5500000000000" target="_blank" rel="noopener">(00) 00000-0000</a></li>
-        <li><strong>Atendimento:</strong> Segunda a sexta, horário comercial</li>
-        <li><strong>Site:</strong> <a href="/index.html">reynard.com.br</a></li>
-      </ul>
-      <p class="small-note" style="margin-top:1rem;">Substitua telefone, e-mail e integrações pelos dados reais antes de publicar.</p>
-    </aside>
-  </div>
-</section>
-</main>
+  </header>
 
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <h4>Reynard</h4>
-          <p>Marketing digital para profissionais e empresas, com foco em presença digital, conteúdo, redes sociais e tráfego pago.</p>
-        </div>
-        <div>
-          <h4>Navegação</h4>
-          <p><a href="/index.html">Home</a></p>
-          <p><a href="/sobre/index.html">Sobre</a></p>
-          <p><a href="/blog/index.html">Blog</a></p>
-          <p><a href="/contato/index.html">Contato</a></p>
-        </div>
-        <div>
-          <h4>Institucional</h4>
-          <p><a href="/politica-de-privacidade/index.html">Política de Privacidade</a></p>
-          <p><a href="/termos-e-condicoes/index.html">Termos e Condições</a></p>
-          <p><a href="mailto:contato@reynard.com.br">contato@reynard.com.br</a></p>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="card">
+          <div class="breadcrumbs"><a href="/index.html">Home</a> / Contato</div>
+          <h1 style="margin:0 0 .75rem;">Entre em contato</h1>
+          <p style="margin:0;color:var(--muted);">
+            Seja você um profissional liberal, autônomo ou pequena empresa, esta página serve como ponto de entrada para novos projetos e dúvidas comerciais.
+          </p>
         </div>
       </div>
-    </footer>
-    
+    </section>
+
+    <section>
+      <div class="container blog-grid">
+        <div class="card">
+          <h2 style="margin-top:0;">Envie sua mensagem</h2>
+
+          <form action="https://formspree.io/f/xnjlzjqw" method="POST">
+            <div class="form-grid">
+              <div>
+                <label for="name">Nome<br />
+                  <input type="text" id="name" name="name" placeholder="Seu nome" required />
+                </label>
+              </div>
+              <div>
+                <label for="email">E-mail<br />
+                  <input type="email" id="email" name="email" placeholder="voce@empresa.com" required />
+                </label>
+              </div>
+            </div>
+
+            <div class="form-grid" style="margin-top:1rem;">
+              <div>
+                <label for="phone">Telefone<br />
+                  <input type="text" id="phone" name="phone" placeholder="(00) 00000-0000" />
+                </label>
+              </div>
+              <div>
+                <label for="subject">Assunto<br />
+                  <input type="text" id="subject" name="subject" placeholder="Quero um site" />
+                </label>
+              </div>
+            </div>
+
+            <div style="margin-top:1rem;">
+              <label for="message">Mensagem<br />
+                <textarea id="message" name="message" placeholder="Conte um pouco sobre o que você precisa." required></textarea>
+              </label>
+            </div>
+
+            <input type="hidden" name="_subject" value="Novo contato enviado pelo site Reynard" />
+            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+            <div style="margin-top:1rem;display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
+              <button class="btn btn-primary" type="submit">Enviar mensagem</button>
+              <span class="small-note">Responderemos o mais breve possível.</span>
+            </div>
+          </form>
+        </div>
+
+        <aside class="card">
+          <h3 style="margin-top:0;">Informações</h3>
+          <ul class="list-clean">
+            <li><strong>E-mail:</strong> <a href="mailto:contato@reynard.com.br">contato@reynard.com.br</a></li>
+            <li><strong>WhatsApp:</strong> <a href="https://wa.me/5500000000000" target="_blank" rel="noopener">(00) 00000-0000</a></li>
+            <li><strong>Atendimento:</strong> Segunda a sexta, horário comercial</li>
+            <li><strong>Site:</strong> <a href="/index.html">reynard.com.br</a></li>
+          </ul>
+          <p class="small-note" style="margin-top:1rem;">Substitua telefone e WhatsApp pelos dados reais antes de publicar.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Reynard</h4>
+        <p>Marketing digital para profissionais e empresas, com foco em presença digital, conteúdo, redes sociais e tráfego pago.</p>
+      </div>
+      <div>
+        <h4>Navegação</h4>
+        <p><a href="/index.html">Home</a></p>
+        <p><a href="/sobre/index.html">Sobre</a></p>
+        <p><a href="/blog/index.html">Blog</a></p>
+        <p><a href="/contato/index.html">Contato</a></p>
+      </div>
+      <div>
+        <h4>Institucional</h4>
+        <p><a href="/politica-de-privacidade/index.html">Política de Privacidade</a></p>
+        <p><a href="/termos-e-condicoes/index.html">Termos e Condições</a></p>
+        <p><a href="mailto:contato@reynard.com.br">contato@reynard.com.br</a></p>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
